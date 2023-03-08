@@ -1,0 +1,80 @@
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .card-item {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  
+  .card {
+    background-color: white;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 5px;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    border: 1px solid var(--primary);
+  }
+  
+  .card-img {
+    margin: auto;
+  }
+  
+  .card-img img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  
+  .card-text {
+    display: inline-block;
+    color: rgb(78, 75, 75);
+    font-size: 18px;
+  }
+  
+  .card button {
+    background-color: var(--primary);
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  .card button:hover {
+    background-color: #ffffff;
+    color: var(--primary)
+  }
+  
+  /* Construyendo el funcionamiento responsive del sitio */
+  @media (min-width: 40rem) {
+    .card-item {
+      width: 45%;
+    }
+  }
+  
+  @media (min-width: 56rem) {
+    .card-item {
+      width: 30%;
+    }
+  }
+  
+  @media (min-width: 85rem) {
+    .card-item {
+      width: 20%;
+    }
+  }
+  

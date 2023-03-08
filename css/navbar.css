@@ -1,0 +1,62 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+
+:root {
+    --primary: #0011ff9f;
+}
+
+* {
+    margin: 0;
+}
+
+header {
+    font-family:'Lucida Sans', Verdana, sans-serif;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    float: left;
+    display: block;
+    margin: 0px 25px;
+    padding-top: 5px;
+}
+
+/* Links de la barra de navegación */
+header a {
+    display: inline-block;
+    color: #3f34cc;
+    text-align: start;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  /* Cambiar el color de los links al pasar el mouse */
+header a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+header a.active {
+    background-color: #e7e7e7af;
+  }
+
+
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #3f34cc;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px; 
+}

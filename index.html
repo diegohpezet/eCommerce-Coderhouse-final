@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/navbar.css"/>
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Deck'd</title>
+</head>
+<body>
+    <header>
+        <h1>Deck'd</h1>
+        <a href="#" class="active">Products</a>
+        <a href="views/shoppingcart.html" class="cart">
+            <i class="fa-solid fa-cart-shopping"> 
+            <span class='badge badge-warning' id='lblCartCount'>0</span></i>
+        </a>
+    </header>
+    <div class="main">
+        <h2>Available products</h2>
+        <ul class="cards-list" id="display">
+            <!--Aquí se carga la lista de productos-->
+        </ul>
+    </div>
+    
+    <!--Toastify script-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!--Script.js-->
+    <script src="script/products.js"></script>
+</body>
+</html>

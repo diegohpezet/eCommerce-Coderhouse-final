@@ -1,0 +1,68 @@
+.main {
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Quicksand", serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+}
+
+table {
+  font-size: 19px;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--primary);
+  color: white;
+}
+
+td {
+  text-align: center;
+}
+
+td a {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+td img {
+  width: 5rem;
+}
+
+#clearCartBtn {
+  background-color: #ff0707bd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.cartTotal {
+  font-size: 20px;
+  text-align: end;
+}
+
+form {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: end;
+}
+
+input[type=text] {
+  font-size: 16px;
+  border: 1px solid var(--primary);
+
+}
+
+#confirmBtn {
+  background-color: var(--primary);
+  color: #fff;
+  border: 0px;
+  font-size: 16px;
+  cursor: pointer;
+}

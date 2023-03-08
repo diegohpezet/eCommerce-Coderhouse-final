@@ -1,0 +1,30 @@
+body {
+  background-color: #fafafa;
+}
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Quicksand", serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+}
+
+/* Diseño del scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b0c8ff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #89adff;
+}
