@@ -49,12 +49,12 @@ if (cartProducts) {
 
   function decrease(id) {
     const productInCart = cartProducts.find(element => element.id = id)
-    productInCart.inCart--;
-    
-    localStorage.setItem("shoppingCart", JSON.stringify(cartProducts));
-    localStorage.setItem("productAmount", productAmount - 1);
-
-    location.reload()
+    if (productInCart.inCart > 1) {
+      productInCart.inCart--;
+      localStorage.setItem("shoppingCart", JSON.stringify(cartProducts));
+      localStorage.setItem("productAmount", productAmount - 1);
+      location.reload()
+    }
   }
 
   // Mostrar el total de la compra
