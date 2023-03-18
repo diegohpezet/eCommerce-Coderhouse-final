@@ -25,6 +25,7 @@ main .text {
 }
 
 main .text p {
+    font-size: 22px;
     font-weight: 400;
     color: #fff;
 }
