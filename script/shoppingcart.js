@@ -129,7 +129,7 @@ if (cartProducts) {
           To : `${emailInput.value}`,
           From : "diegohpezet@gmail.com",
           Subject : "¡Gracias por tu compra en Deck'd!",
-          Body : "<html><h2>El total de tu compra en Deck'd es de " + getTotal() + "</h2><br><p>Puedes continuar con el pago mediante transferencia. Los datos son los siguientes: </p></html>" 
+          Body : "<html><h2>El total de tu compra en Deck'd es de $" + getTotal() + "</h2><br><p>Puedes continuar con el pago mediante transferencia. Los datos son los siguientes: </p><ul><li><b>CVU:</b> 0000003100056034219417</li><li><b>Alias:</b> diegohpezet</li></ul><p>Luego envíe un mensaje con el comprobante de pago a 00 1234-5678<br>Cuando recibamos este comprobante, coordinaremos el envío a su sucursal de correo más cercana</p><p><i>Nota: Si no has sido tú quien ha realizado la compra puedes ignorar este mensaje</i></p></html>" 
         }).then(
           Swal.fire({
             icon: 'success',
