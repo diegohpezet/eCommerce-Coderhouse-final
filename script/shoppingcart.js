@@ -130,16 +130,15 @@ if (cartProducts) {
           From : "diegohpezet@gmail.com",
           Subject : "¡Gracias por tu compra en Deck'd!",
           Body : `
-          El total de tu compra en Deck'd es de $${getTotal()}
-          
-          Puedes proceder con el pago mediante transferencia. Los datos son los siguientes:
-          - CVU: 0000003100056034219417
-          - Alias: diegohpezet
-
-          Luego envía un mensaje con el comprobante a 00 1234-5678
-
-          Cuando recibamos el pago y el comprobante coordinaremos la entrega en la sucursar de correo más cercana a ti.
-
+          El total de tu compra en Deck'd es de $${getTotal()} \n
+          \n
+          Puedes proceder con el pago mediante transferencia. Los datos son los siguientes: \n
+          - CVU: 0000003100056034219417 \n
+          - Alias: diegohpezet \n
+          \n
+          Luego envía un mensaje con el comprobante a 00 1234-5678 \n
+          Cuando recibamos el pago y el comprobante coordinaremos la entrega en la sucursar de correo más cercana a ti. \n
+          \n
           Nota: Si no eres tú quien ha realizado la compra simplemente ignora este mensaje
           `
         }).then(
