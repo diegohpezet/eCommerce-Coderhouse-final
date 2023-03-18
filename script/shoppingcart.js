@@ -27,50 +27,88 @@ if (cartProducts) {
   const productContainer = document.querySelector("#products-display");
 
   cartProducts.forEach(element => {
-    productContainer.innerHTML += `<tr>
-    <td><img src="${element.img}"></td>
-    <td>${element.title}</td>
-    <td><a onclick="decrease(${element.id})">-</a> ${element.inCart} <a onclick="increase(${element.id})">+</a></td>
-    <td>$${element.price}</td>
-    <td><b>$${element.price * element.inCart}</b></td>
-    </tr>`;
+    if (element.inCart >= 1) {
+      productContainer.innerHTML += `<tr>
+      <td><img src="${element.img}"></td>
+      <td>${element.title}</td>
+      <td><a onclick="decrease(${element.id})">-</a> <span id="amountOf${element.id}">${element.inCart}</span> <a onclick="increase(${element.id})">+</a></td>
+      <td>$${element.price}</td>
+      <td><b id="singleTotal">$${element.price * element.inCart}</b></td>
+      </tr>`;
+    }
   })
 
   // Funciones de los botones de más y menos
   function increase(id) {
-    const productInCart = cartProducts.find(element => element.id = id)
+    const productInCart = cartProducts.find(element => element.id === id)
     productInCart.inCart++;
 
     localStorage.setItem("shoppingCart", JSON.stringify(cartProducts));
     localStorage.setItem("productAmount", productAmount + 1);
 
-    location.reload()
+    // Actualizar los valores del carrito, total y cantidad
+    cartCount.innerHTML = productAmount += 1;
+    updateValues(id);
+    getTotal();
   }
 
   function decrease(id) {
-    const productInCart = cartProducts.find(element => element.id = id)
+    const productInCart = cartProducts.find(element => element.id === id)
+    /* 
+      En caso de que haya varios elementos iguales, quitar 1
+      Caso contrario, quitar el elemento del carrito
+    */
     if (productInCart.inCart > 1) {
       productInCart.inCart--;
+
       localStorage.setItem("shoppingCart", JSON.stringify(cartProducts));
       localStorage.setItem("productAmount", productAmount - 1);
-      location.reload()
+
+      // Actualizar los valores del carrito, total y cantidad
+      cartCount.innerHTML = productAmount -= 1;
+      updateValues(id)
+      getTotal()
+    } else {
+      let index = cartProducts.findIndex(element => {
+        return element.id === productInCart.id;
+      })
+      cartProducts.splice(index, 1)
+      localStorage.setItem("productAmount", productAmount - 1);
+
+      if (cartProducts.length === 0){
+        localStorage.removeItem("shoppingCart")
+        window.location.href = 'mart.html';
+      } else {
+        localStorage.setItem("shoppingCart", JSON.stringify(cartProducts));
+        location.reload();
+      }
     }
+  }
+
+  function updateValues(id) {
+    const productInCart = cartProducts.find(element => element.id === id)
+    const amountTag = document.getElementById(`amountOf${id}`)
+    amountTag.innerHTML = productInCart.inCart
+    const singleTotal = document.getElementById("singleTotal")
+    singleTotal.innerHTML = productInCart.price * productInCart.inCart
   }
 
   // Mostrar el total de la compra
   function getTotal() {
+    const total = document.getElementById("total");
+
     let cartTotal = 0
     cartProducts.forEach(element => {
       cartTotal += element.price * element.inCart;
     })
-    return cartTotal;
+    total.innerHTML = cartTotal;
   }
 
-  // Opciones adicionales al final de la tabla
+  // Borrar carrito al final de la tabla
   container.innerHTML += `
     <button id="clearCartBtn">Clear cart</button>
     <div class="cartTotal">
-      <h4>Total: $${getTotal()}</h4>
+      <h4>Total: $<span id="total">0</span></h4>
     </div>
     <form>
         <input type="text" id="emailInput" placeholder="example@gmail.com" />
@@ -78,6 +116,7 @@ if (cartProducts) {
     </form>
     `;
 
+    // Formulario de compra
     let emailInput = document.getElementById("emailInput")
     let confirmBtn = document.getElementById("confirmBtn");
     confirmBtn.onclick = () => {
@@ -105,7 +144,7 @@ if (cartProducts) {
       }).then((result) => {
         if (result.isConfirmed) {
           localStorage.clear();
-          window.location.href = '../index.html';
+          window.location.href = 'mart.html';
         }
       })
     }
@@ -113,3 +152,5 @@ if (cartProducts) {
   container.innerHTML = `
   <div>You haven't added products to your shopping cart yet!</div>`
 }
+
+getTotal()

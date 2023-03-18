@@ -1,0 +1,42 @@
+[{
+    "id": 1,
+    "title": "Bicycle Supreme",
+    "price": 400,
+    "img": "https://cdn.shopify.com/s/files/1/0414/8435/3702/products/STEEL_ACESSORIOS-Baralho-supreme-2_800x.png?v=1648562368",
+    "inCart": 0
+  },
+  {
+    "id": 2,
+    "title": "Bicycle Emotions",
+    "price": 800,
+    "img": "https://lepetitmagicien.com/6962-home_default/1st-run-bicycle-emotions-deck-playing-card-.jpg",
+    "inCart": 0
+  },
+  {
+    "id": 3,
+    "title": "Memento Mori Playing Cards",
+    "price": 1200,
+    "img": "http://cdn.shopify.com/s/files/1/1804/8251/products/MomentoMori_1_600x600.png?v=1656924348",
+    "inCart": 0
+  },
+  {
+    "id": 4,
+    "title": "NOC Originals: Red",
+    "price": 1200,
+    "img": "http://cdn.shopify.com/s/files/1/1804/8251/products/nocred_Site_1_600x600.png?v=1600610682",
+    "inCart": 0
+  },
+  {
+    "id": 5,
+    "title": "NOC Summer Edition",
+    "price": 1500,
+    "img": "http://cdn.shopify.com/s/files/1/0901/8716/products/noc-summer-light-blue_1d3393a7-d41c-46ad-82b3-10897bf05819_600x.png?v=1497138144",
+    "inCart": 0
+  },
+  {
+    "id": 6,
+    "title": "Aviator Deck",
+    "price": 700,
+    "img": "https://cdn.shopify.com/s/files/1/1804/8251/products/aviatorblue_Site_3_1024x1024.png?v=1597344331",
+    "inCart": 0
+  }]

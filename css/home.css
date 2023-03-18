@@ -1,0 +1,95 @@
+html {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+}
+
+body {
+    background-color: #FAFAFA;
+    background-image: url("../img/slanted-gradient.svg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    text-align: center;    
+}
+
+main .img img{
+    width: 90%;
+}
+
+main .text {
+    font-weight: 400;
+    color: #fff;
+}
+
+main .text p {
+    font-weight: 400;
+    color: #fff;
+}
+
+main button {
+    border: 0px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: var(--primary);
+    width: 175px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.socialBtns button {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 51px;
+    height: 51px;
+    cursor: pointer;
+    margin: 0.5rem
+}
+
+.socialBtns {
+    margin: 3rem;
+    text-align: center;
+}
+
+.socialBtns button img {
+    margin: 5px auto;
+    width: 35px;
+    filter: invert(100%);
+}
+
+footer {
+    color: #fff;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: #8bdaff;
+}
+
+/* Desktop view */
+
+@media (min-width: 768px) {
+    main {
+        text-align: start;
+        display: flex;
+        margin: 2.5rem
+    }
+    
+    main .img {
+        flex: 60%;
+        margin: auto;
+    }
+
+    main .text {
+        margin-top: 20%;
+        font-weight: 600;
+        flex: 40%;
+    }
+    .socialBtns {
+        text-align: end;
+    }
+}

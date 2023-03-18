@@ -34,6 +34,7 @@ td img {
 }
 
 #clearCartBtn {
+  margin-top: 2rem;
   background-color: #ff0707bd;
   color: #fff;
   border: none;

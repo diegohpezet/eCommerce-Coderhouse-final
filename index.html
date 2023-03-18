@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/cards.css" />
     <link rel="stylesheet" href="css/navbar.css"/>
+    <link rel="stylesheet" href="css/home.css">
     <!--FontAwesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
     <!--Toastify-->
@@ -16,22 +16,46 @@
 <body>
     <header>
         <h1>Deck'd</h1>
-        <a href="#" class="active">Products</a>
+        <a href="#" class="active">Home</a>
+        <a href="views/mart.html">Products</a>
         <a href="views/shoppingcart.html" class="cart">
             <i class="fa-solid fa-cart-shopping"> 
             <span class='badge badge-warning' id='lblCartCount'>0</span></i>
         </a>
     </header>
-    <div class="main">
-        <h2>Available products</h2>
-        <ul class="cards-list" id="display">
-            <!--Aquí se carga la lista de productos-->
-        </ul>
-    </div>
+    <main>
+
+        <div class="img">
+          <img src="img/deck.webp" alt="deck">
+        </div>
+    
+        <div class="text">
+          <h2>
+            We know you
+          </h2>
+          
+          <p>
+            Deck'd brings you the stuff every playing cards collector enjoys.
+            We have every single brand on the same site so that you do not have
+            to become crazy to find what you want
+          </p>
+    
+          <button>Buy now!</button>
+        </div>
+        </main>
+        <div class="socialBtns">
+          <button><img src="img/logo-facebook.svg" alt="Facebook"></button>
+          <button><img src="img/logo-twitter.svg" alt="Twitter"></button>
+          <button><img src="img/logo-instagram.svg" alt="Instagram"></button>
+        </div>
+    
+        <footer>
+          <p class="attribution">
+            Coded by <a href="https://www.frontendmentor.io/profile/diegohpezet">diegohpezet</a> - <a href="">Coderhouse</a>.
+          </p>
+        </footer>
     
     <!--Toastify script-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <!--Script.js-->
-    <script src="script/products.js"></script>
 </body>
 </html>
