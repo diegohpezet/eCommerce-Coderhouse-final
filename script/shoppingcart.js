@@ -121,16 +121,25 @@ if (cartProducts) {
     let confirmBtn = document.getElementById("confirmBtn");
     confirmBtn.onclick = () => {
       if (emailInput.value !== ''){
-        Swal.fire({
-          icon: 'success',
-          title: 'Done!',
-          text: 'You will receive an email in order to proceed with the payment.',
-          showConfirmButton: false,
-          timer: 3000
-        }).then(() => {
-          localStorage.clear();
-          window.location.href = '../index.html';
-        })
+        // Enviar email usando SMTP
+        Email.send({
+          SecureToken : "098a4857-c49a-4717-8d36-284a5df31e1e",
+          To : `${emailInput.value}`,
+          From : "diegohpezet@gmail.com",
+          Subject : "Compra en Deck'd",
+          Body : "Mensaje"
+        }).then(
+          Swal.fire({
+            icon: 'success',
+            title: 'Done!',
+            text: 'You will receive an email in order to proceed with the payment.',
+            showConfirmButton: false,
+            timer: 3000
+          }).then(() => {
+            localStorage.clear();
+            window.location.href = '../index.html';
+          })
+        );
       }
     } 
 
