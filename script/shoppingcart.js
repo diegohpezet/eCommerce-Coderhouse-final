@@ -1,6 +1,7 @@
 const cartCount = document.getElementById("lblCartCount");
 const container = document.querySelector(".main");
 
+
 let cartProducts = localStorage.getItem("shoppingCart");
 cartProducts = JSON.parse(cartProducts);
 
@@ -94,14 +95,15 @@ if (cartProducts) {
   }
 
   // Mostrar el total de la compra
+
   function getTotal() {
     const total = document.getElementById("total");
-
     let cartTotal = 0
     cartProducts.forEach(element => {
       cartTotal += element.price * element.inCart;
     })
     total.innerHTML = cartTotal;
+    return cartTotal; // Esto es para enviar el email
   }
 
   // Borrar carrito al final de la tabla
@@ -126,8 +128,20 @@ if (cartProducts) {
           SecureToken : "098a4857-c49a-4717-8d36-284a5df31e1e",
           To : `${emailInput.value}`,
           From : "diegohpezet@gmail.com",
-          Subject : "Compra en Deck'd",
-          Body : "Mensaje"
+          Subject : "¡Gracias por tu compra en Deck'd!",
+          Body : `
+          El total de tu compra en Deck'd es de $${getTotal()}
+          
+          Puedes proceder con el pago mediante transferencia. Los datos son los siguientes:
+          - CVU: 0000003100056034219417
+          - Alias: diegohpezet
+
+          Luego envía un mensaje con el comprobante a 00 1234-5678
+
+          Cuando recibamos el pago y el comprobante coordinaremos la entrega en la sucursar de correo más cercana a ti.
+
+          Nota: Si no eres tú quien ha realizado la compra simplemente ignora este mensaje
+          `
         }).then(
           Swal.fire({
             icon: 'success',
