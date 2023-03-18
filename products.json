@@ -1,42 +1,105 @@
 [{
     "id": 1,
     "title": "Bicycle Supreme",
-    "price": 400,
-    "img": "https://cdn.shopify.com/s/files/1/0414/8435/3702/products/STEEL_ACESSORIOS-Baralho-supreme-2_800x.png?v=1648562368",
+    "price": 1400,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzlm8cMSXBpc8LMhV3V06TLwhSWPjWdDonRcFULKIUOt1ESUZ7EGEZ78mprpswutZ9_-A&usqp=CAU",
     "inCart": 0
   },
   {
     "id": 2,
     "title": "Bicycle Emotions",
-    "price": 800,
+    "price": 1600,
     "img": "https://lepetitmagicien.com/6962-home_default/1st-run-bicycle-emotions-deck-playing-card-.jpg",
     "inCart": 0
   },
   {
     "id": 3,
-    "title": "Memento Mori Playing Cards",
-    "price": 1200,
-    "img": "http://cdn.shopify.com/s/files/1/1804/8251/products/MomentoMori_1_600x600.png?v=1656924348",
+    "title": "Bicycle Black Tiger",
+    "price": 3000,
+    "img": "https://www.atomsindustries.com/assets/images/items/ASD1747/black-tiger-box_red.png",
     "inCart": 0
   },
   {
     "id": 4,
     "title": "NOC Originals: Red",
-    "price": 1200,
+    "price": 3200,
     "img": "http://cdn.shopify.com/s/files/1/1804/8251/products/nocred_Site_1_600x600.png?v=1600610682",
     "inCart": 0
   },
   {
     "id": 5,
     "title": "NOC Summer Edition",
-    "price": 1500,
+    "price": 4000,
     "img": "http://cdn.shopify.com/s/files/1/0901/8716/products/noc-summer-light-blue_1d3393a7-d41c-46ad-82b3-10897bf05819_600x.png?v=1497138144",
     "inCart": 0
   },
   {
     "id": 6,
     "title": "Aviator Deck",
-    "price": 700,
+    "price": 1400,
     "img": "https://cdn.shopify.com/s/files/1/1804/8251/products/aviatorblue_Site_3_1024x1024.png?v=1597344331",
+    "inCart": 0
+  },
+  {
+    "id": 7,
+    "title": "Memento Mori Playing Cards",
+    "price": 2200,
+    "img": "http://cdn.shopify.com/s/files/1/1804/8251/products/MomentoMori_1_600x600.png?v=1656924348",
+    "inCart": 0
+  },
+  {
+    "id": 8,
+    "title": "Orbit Fifth Edition",
+    "price": 2400,
+    "img": "http://cdn.shopify.com/s/files/1/1804/8251/products/orbit5_Site_1_600x600.png?v=1600632126",
+    "inCart": 0
+  },
+  {
+    "id": 9,
+    "title": "Tally Ho Deck",
+    "price": 1600,
+    "img": "https://uscartamundi.vteximg.com.br/arquivos/ids/156542/Tally-Ho-Jackson-Robinson-Hero.png?v=638036055653500000",
+    "inCart": 0
+  },
+  {
+    "id": 10,
+    "title": "Star Wars Special Edition Playing Cards",
+    "price": 4600,
+    "img": "https://i.ebayimg.com/images/g/dyQAAOSwJeFj2Auy/s-l500.png",
+    "inCart": 0
+  },
+  {
+    "id": 11,
+    "title": "Bee Deck",
+    "price": 1500,
+    "img": "https://cdn.shopify.com/s/files/1/2557/4420/products/FrontBox_9ffe11ed-b6c8-4dfa-8e88-cb0ea70c755d_720x.webp?v=1676726791",
+    "inCart": 0
+  },
+  {
+    "id": 12,
+    "title": "Jerry's Nuggets",
+    "price": 2000,
+    "img": "https://www.picclickimg.com/f5EAAOSwdDli8Pjc/Jerrys-Nugget-Casino-Playing-Cards-Modern-Feel-1St.webp",
+    "inCart": 0
+  },
+  {
+    "id": 13,
+    "title": "Daniel Madison's Remedies",
+    "price": 2700,
+    "img": "https://cdn.shopify.com/s/files/1/1804/8251/products/remedies_Site_1_1024x1024.png?v=1656937048",
+    "inCart": 0
+  },
+  {
+    "id": 14,
+    "title": "Daniel Madison's Hellions",
+    "price": 3000,
+    "img": "https://promagicstore.com/wp-content/uploads/2018/11/Hellions-Box-compressor.png",
+    "inCart": 0
+  },
+  {
+    "id": 15,
+    "title": "Gold Rounders Deck",
+    "price": 5000,
+    "img": "https://cdn.shopify.com/s/files/1/0297/4597/1244/products/gold-rounders-front.png?v=1626965812&width=400",
     "inCart": 0
   }]
