@@ -74,7 +74,7 @@ fetch("../products.json")
         close: false,
         gravity: "bottom",
         position: "right",
-        destination: "views/shoppingcart.html",
+        destination: "../views/shoppingcart.html",
       }).showToast();
     };
   });
