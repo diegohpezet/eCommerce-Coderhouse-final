@@ -128,7 +128,7 @@ if (cartProducts) {
         e.preventDefault();
         // Enviar email usando SMTP
         Email.send({
-          SecureToken : "098a4857-c49a-4717-8d36-284a5df31e1e", //Luego de recibir la corrección quito esto
+          SecureToken : "-", //Luego de recibir la corrección quito esto
           To : `${emailInput.value}`,
           From : "diegohpezet@gmail.com",
           Subject : "¡Gracias por tu compra en Deck'd!",
