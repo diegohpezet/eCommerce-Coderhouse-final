@@ -17,12 +17,14 @@
 <body>
     <header>
         <h1>Deck'd</h1>
-        <a href="#" class="active">Home</a>
-        <a href="views/mart.html">Products</a>
-        <a href="views/shoppingcart.html" class="cart">
-            <i class="fa-solid fa-cart-shopping"> 
-            <span class='badge badge-warning' id='lblCartCount'>0</span></i>
-        </a>
+        <div id="links" class="nav-menu">
+          <a href="#" class="active">Home</a>
+          <a href="views/mart.html">Products</a>
+          <a href="views/shoppingcart.html" class="cart">
+              <i class="fa-solid fa-cart-shopping"> 
+              <span class='badge badge-warning' id='lblCartCount'>0</span></i>
+          </a>
+        </div>
     </header>
     <main>
 
@@ -41,10 +43,19 @@
             to become crazy to find what you want
           </p>
     
-          <button>Buy now!</button>
+          <div class="mainBtn">
+            <a href="views/mart.html">Buy now!</a>
+          </div>
+          
         </div>
         </main>
+        
         <div class="socialBtns">
+          <!-- 
+            Los botones aquí están pensados para que, una vez
+            el emprendimiento salga a la luz, te redireccione
+            a sus redes sociales
+          -->
           <button><img src="img/logo-facebook.svg" alt="Facebook"></button>
           <button><img src="img/logo-twitter.svg" alt="Twitter"></button>
           <button><img src="img/logo-instagram.svg" alt="Instagram"></button>
@@ -55,8 +66,5 @@
             Coded by <a href="https://github.com/diegohpezet/">diegohpezet</a> - <a href="">Coderhouse</a>.
           </p>
         </footer>
-    
-    <!--Toastify script-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

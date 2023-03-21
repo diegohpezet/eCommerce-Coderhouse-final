@@ -1,12 +1,14 @@
-const cartCount = document.getElementById("lblCartCount");
-const container = document.querySelector(".main");
+import { loadShoppingCart } from "./loadShoppingCart.js";
 
+const container = document.querySelector(".main");
 
 let cartProducts = localStorage.getItem("shoppingCart");
 cartProducts = JSON.parse(cartProducts);
 
-let productAmount = parseInt(localStorage.getItem("productAmount"));
-cartCount.innerHTML = productAmount;
+// Carga el número que se muestra al lado del carrito
+const cartCount = document.getElementById("lblCartCount");
+let productAmount = 0;
+loadShoppingCart();
 
 if (cartProducts) {
   // Construye la estructura de la tabla
@@ -114,18 +116,19 @@ if (cartProducts) {
     </div>
     <form>
         <input type="text" id="emailInput" placeholder="example@gmail.com" />
-        <button type="button" id="confirmBtn">Continue to payment</button>
+        <button type="submit" id="confirmBtn">Continue to payment</button>
     </form>
     `;
 
     // Formulario de compra
     let emailInput = document.getElementById("emailInput")
     let confirmBtn = document.getElementById("confirmBtn");
-    confirmBtn.onclick = () => {
+    confirmBtn.onclick = (e) => {
       if (emailInput.value !== ''){
+        e.preventDefault();
         // Enviar email usando SMTP
         Email.send({
-          SecureToken : "098a4857-c49a-4717-8d36-284a5df31e1e",
+          SecureToken : "098a4857-c49a-4717-8d36-284a5df31e1e", //Luego de recibir la corrección quito esto
           To : `${emailInput.value}`,
           From : "diegohpezet@gmail.com",
           Subject : "¡Gracias por tu compra en Deck'd!",
@@ -139,7 +142,7 @@ if (cartProducts) {
             timer: 3000
           }).then(() => {
             localStorage.clear();
-            window.location.href = '../index.html';
+            window.location.href = 'mart.html';
           })
         );
       }
@@ -159,9 +162,9 @@ if (cartProducts) {
         }
       })
     }
+    getTotal()
 } else {
   container.innerHTML = `
   <div>You haven't added products to your shopping cart yet!</div>`
 }
 
-getTotal()

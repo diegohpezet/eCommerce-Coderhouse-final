@@ -16,16 +16,16 @@
   </head>
   <body>
     <header>
-      <h1 class="title">Deck'd</h1>
-      <nav class="links">
-        <a href="../index.html">Home</a>
+      <h1>Deck'd</h1>
+      <div id="links" class="nav-menu">
+        <a href="../index.html" >Home</a>
         <a href="mart.html">Products</a>
         <a href="#" class="cart active">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <span class='badge badge-warning' id="lblCartCount">0</span>
+            <i class="fa-solid fa-cart-shopping"> 
+            <span class='badge badge-warning' id='lblCartCount'>0</span></i>
         </a>
-      </nav>
-    </header>
+      </div>
+  </header>
     <div class="main">
       <!--
         El conenido variará dependiendo de si el usuario
@@ -36,7 +36,7 @@
     <!--SweetAlert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--Carrito de compras-->
-    <script src="../script/shoppingcart.js"></script>
+    <script src="../script/shoppingcart.js" type="module"></script>
     <!--API para enviar email-->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>

@@ -1,3 +1,5 @@
+import {loadShoppingCart} from "./loadShoppingCart.js";
+
 // Seteamos el carrito de compras
 let shoppingCart = [];
 if (localStorage.getItem("shoppingCart")) {
@@ -5,16 +7,11 @@ if (localStorage.getItem("shoppingCart")) {
 }
 
 // Carga el número que se muestra al lado del carrito
-productAmount = 0;
-if (localStorage.getItem("productAmount")) {
-  var productAmount = parseInt(localStorage.getItem("productAmount"));
-} else {
-  localStorage.setItem("productAmount", 0);
-}
+const cartCount = document.getElementById("lblCartCount");
+let productAmount = 0;
+loadShoppingCart();
 
 // Se recogen los datos de mi API
-cartCount = document.getElementById("lblCartCount");
-cartCount.innerHTML = productAmount;
 
 fetch("../products.json")
   .then((response) => response.json())

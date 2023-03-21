@@ -24,6 +24,14 @@ header h1 {
 }
 
 /* Links de la barra de navegación */
+
+@media (max-width: 450px) {
+    .nav-menu {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
 header a {
     display: inline-block;
     color: #3f34cc;
@@ -43,6 +51,10 @@ header a.active {
     background-color: #e7e7e7af;
   }
 
+.cart {
+    float: right;
+}
+
 
 .badge {
   padding-left: 9px;
@@ -60,3 +72,5 @@ header a.active {
     vertical-align: top;
     margin-left: -10px; 
 }
+
+
