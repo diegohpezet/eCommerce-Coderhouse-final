@@ -1,14 +1,7 @@
-import { loadShoppingCart } from "./loadShoppingCart.js";
-
 const container = document.querySelector(".main");
 
 let cartProducts = localStorage.getItem("shoppingCart");
 cartProducts = JSON.parse(cartProducts);
-
-// Carga el número que se muestra al lado del carrito
-const cartCount = document.getElementById("lblCartCount");
-let productAmount = 0;
-loadShoppingCart();
 
 if (cartProducts) {
   // Construye la estructura de la tabla
